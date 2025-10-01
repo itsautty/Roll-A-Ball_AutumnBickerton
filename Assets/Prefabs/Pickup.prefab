@@ -13,7 +13,11 @@ GameObject:
   - component: {fileID: 5139901721554997841}
   - component: {fileID: 3938402671868419214}
   - component: {fileID: 7806580387776785025}
+<<<<<<< HEAD
   - component: {fileID: 11340311060682495}
+=======
+  - component: {fileID: 4369313359559747852}
+>>>>>>> 98d5c30fb62eb6d7d48d631b48fb584270b927f3
   m_Layer: 0
   m_Name: Pickup
   m_TagString: PickUp
@@ -122,7 +126,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8592f5576225a324090b983ce562a594, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
 --- !u!54 &11340311060682495
+=======
+--- !u!54 &4369313359559747852
+>>>>>>> 98d5c30fb62eb6d7d48d631b48fb584270b927f3
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
