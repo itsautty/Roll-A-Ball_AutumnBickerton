@@ -34,12 +34,12 @@ public class PlayerController : MonoBehaviour
     void SetCountText()
     {
         countText.text = "Count: " + count.ToString();
-        if(count >= 8) 
+        if (count >= 8)
         {
             winTextObject.SetActive(true);
         }
     }
-   void FixedUpdate()
+    void FixedUpdate()
     {
         Vector3 movement = new Vector3(movementX, 0.0f, movementY);
 
@@ -48,7 +48,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("PickUp"))
+        if (other.gameObject.CompareTag("PickUp"))
         {
             other.gameObject.SetActive(false);
             count = count + 1;
@@ -63,5 +63,13 @@ public class PlayerController : MonoBehaviour
             // Destroy the current object
             Destroy(gameObject);
 
+            // Update the winText to display "You Lose!"
+            winTextObject.gameObject.SetActive(true);
+            winTextObject.GetComponent<TextMeshProUGUI>().text = "You Lose!";
 
         }
+
+    }
+
+}
+
