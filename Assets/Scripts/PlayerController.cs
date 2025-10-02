@@ -37,6 +37,9 @@ public class PlayerController : MonoBehaviour
         if (count >= 8)
         {
             winTextObject.SetActive(true);
+
+            // Destroy the enemy GameObject.
+            Destroy(GameObject.FindGameObjectWithTag("Enemy"));
         }
     }
     void FixedUpdate()
