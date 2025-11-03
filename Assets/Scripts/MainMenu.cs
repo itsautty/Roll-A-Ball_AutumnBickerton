@@ -2,9 +2,17 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
-  public void PlayGame()
+  public void LoadScene(string sceneName) 
     {
-        SceneManager.LoadSceneAsync(1);
+        SceneManager.LoadScene(sceneName);
     }
 
+    public void QuitGame()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+    Application.Quit();
+#endif
+    }
 }
