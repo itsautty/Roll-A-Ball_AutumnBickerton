@@ -67,7 +67,7 @@ public class PlayerController : MonoBehaviour
             // Destroy the current object
             Destroy(gameObject);
 
-            // Update the winText to display "You Lose! Press 'R' to Restart!"
+            // Update the winText to display "You Lose!"
             winTextObject.gameObject.SetActive(true);
             winTextObject.GetComponent<TextMeshProUGUI>().text = "You Lose!";
           
