@@ -1,8 +1,8 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class GameManagerScript : MonoBehaviour
+public class RestartButton : MonoBehaviour
 {
-    public GameObject gameOverUI;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -14,9 +14,10 @@ public class GameManagerScript : MonoBehaviour
     {
         
     }
-
-    public void gameOver()
+    public void ResetTheGame()
     {
-        gameOverUI.SetActive(true);
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        print("The button is working.");
     }
 }
