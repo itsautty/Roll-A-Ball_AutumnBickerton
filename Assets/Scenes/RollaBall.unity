@@ -2572,7 +2572,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 517814665}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1201976516}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: ToMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &517814665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5463,6 +5475,7 @@ GameObject:
   - component: {fileID: 1201976514}
   - component: {fileID: 1201976513}
   - component: {fileID: 1201976515}
+  - component: {fileID: 1201976516}
   m_Layer: 5
   m_Name: GameOverScreen
   m_TagString: Untagged
@@ -5544,6 +5557,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointsText: {fileID: 0}
+--- !u!114 &1201976516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1201976511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44dda27fa40bf9640a7f6753a1f76c29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1230409772
 GameObject:
   m_ObjectHideFlags: 0
@@ -6948,7 +6973,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46ac1de600d4e634c92cc2205cbee367, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOverUI: {fileID: 0}
 --- !u!4 &1664857904
 Transform:
   m_ObjectHideFlags: 0
