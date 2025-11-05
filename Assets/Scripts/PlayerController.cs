@@ -8,11 +8,13 @@ public class PlayerController : MonoBehaviour
     public float speed = 0;
     public TextMeshProUGUI countText;
     public GameObject winTextObject;
+    public GameObject loseScreen;
 
     private Rigidbody rb;
     private int count;
     private float movementX;
     private float movementY;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -21,6 +23,8 @@ public class PlayerController : MonoBehaviour
 
         SetCountText();
         winTextObject.SetActive(false);
+
+        
     }
 
     void OnMove(InputValue movementValue)
@@ -50,7 +54,7 @@ public class PlayerController : MonoBehaviour
 
     void SetCountText()
     {
-        countText.text = "Count: " + count.ToString();
+        countText.text = "P0ints: " + count.ToString();
         if (count >= 8)
         {
             winTextObject.SetActive(true);
@@ -67,9 +71,10 @@ public class PlayerController : MonoBehaviour
             // Destroy the current object
             Destroy(gameObject);
 
-            // Update the winText to display "You Lose!"
-            winTextObject.gameObject.SetActive(true);
-            winTextObject.GetComponent<TextMeshProUGUI>().text = "You Lose!";
+         
+            loseScreen.gameObject.SetActive(true);
+
+      
           
         }
 
