@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public TextMeshProUGUI countText;
     public GameObject winTextObject;
     public GameObject loseScreen;
+    public TextMeshProUGUI LoseScreenScore;
 
     private Rigidbody rb;
     private int count;
@@ -73,6 +74,7 @@ public class PlayerController : MonoBehaviour
 
          
             loseScreen.gameObject.SetActive(true);
+            LoseScreenScore.text = count.ToString() + " P0ints";
 
       
           
